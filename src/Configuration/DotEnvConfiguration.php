@@ -132,7 +132,10 @@ class DotEnvConfiguration extends AbstractConfiguration
         ];
 
         // support for dotenv 1.x and 2.x. see also https://github.com/lesstif/php-jira-rest-client/issues/102
-        if (class_exists('\Dotenv\Dotenv')) {
+        if (class_exists('Symfony\Component\Dotenv\Dotenv')) {
+            $dotEnv = new \Symfony\Component\Dotenv\Dotenv();
+            $dotEnv->load($path);
+        } elseif (class_exists('\Dotenv\Dotenv')) {
             if (method_exists('\Dotenv\Dotenv', 'createImmutable')) {    // v4
                 $dotenv = \Dotenv\Dotenv::createImmutable($path);
 
