@@ -1,21 +1,21 @@
 # PHP JIRA Rest Client
 
-[![Latest Stable Version](https://poser.pugx.org/lesstif/php-jira-rest-client/v/stable)](https://packagist.org/packages/lesstif/php-jira-rest-client)
-[![Latest Unstable Version](https://poser.pugx.org/lesstif/php-jira-rest-client/v/unstable)](https://packagist.org/packages/lesstif/php-jira-rest-client)
-[![Build Status](https://travis-ci.org/lesstif/php-jira-rest-client.svg?branch=master)](https://travis-ci.org/lesstif/php-jira-rest-client)
+[![Latest Stable Version](https://poser.pugx.org/mironoff/php-jira-rest-client/v/stable)](https://packagist.org/packages/mironoff/php-jira-rest-client)
+[![Latest Unstable Version](https://poser.pugx.org/mironoff/php-jira-rest-client/v/unstable)](https://packagist.org/packages/mironoff/php-jira-rest-client)
+[![Build Status](https://travis-ci.org/mironoff/php-jira-rest-client.svg?branch=master)](https://travis-ci.org/mironoff/php-jira-rest-client)
 [![StyleCI](https://styleci.io/repos/30015369/shield?branch=master&style=flat)](https://styleci.io/repos/30015369)
-[![Scrutinizer](https://img.shields.io/scrutinizer/g/lesstif/php-jira-rest-client/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/lesstif/php-jira-rest-client/)
-[![Coverage Status](https://coveralls.io/repos/github/lesstif/php-jira-rest-client/badge.svg?branch=master)](https://coveralls.io/github/lesstif/php-jira-rest-client?branch=master)
-[![License](https://poser.pugx.org/lesstif/php-jira-rest-client/license)](https://packagist.org/packages/lesstif/php-jira-rest-client)
-[![Total Downloads](https://poser.pugx.org/lesstif/php-jira-rest-client/downloads)](https://packagist.org/packages/lesstif/php-jira-rest-client)
-[![Monthly Downloads](https://poser.pugx.org/lesstif/php-jira-rest-client/d/monthly)](https://packagist.org/packages/lesstif/php-jira-rest-client)
-[![Daily Downloads](https://poser.pugx.org/lesstif/php-jira-rest-client/d/daily)](https://packagist.org/packages/lesstif/php-jira-rest-client)
+[![Scrutinizer](https://img.shields.io/scrutinizer/g/mironoff/php-jira-rest-client/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/mironoff/php-jira-rest-client/)
+[![Coverage Status](https://coveralls.io/repos/github/mironoff/php-jira-rest-client/badge.svg?branch=master)](https://coveralls.io/github/mironoff/php-jira-rest-client?branch=master)
+[![License](https://poser.pugx.org/mironoff/php-jira-rest-client/license)](https://packagist.org/packages/mironoff/php-jira-rest-client)
+[![Total Downloads](https://poser.pugx.org/mironoff/php-jira-rest-client/downloads)](https://packagist.org/packages/mironoff/php-jira-rest-client)
+[![Monthly Downloads](https://poser.pugx.org/mironoff/php-jira-rest-client/d/monthly)](https://packagist.org/packages/mironoff/php-jira-rest-client)
+[![Daily Downloads](https://poser.pugx.org/mironoff/php-jira-rest-client/d/daily)](https://packagist.org/packages/mironoff/php-jira-rest-client)
 
 # Requirements
 
 - PHP >= 7.1
 - [php JsonMapper](https://github.com/netresearch/jsonmapper)
-- [phpdotenv](https://github.com/vlucas/phpdotenv)
+- [phpdotenv](https://github.com/symfony/dotenv)
 
 # Installation
 
@@ -27,13 +27,13 @@
 
 2. Next, run the Composer command to install the latest version of php jira rest client.
    ``` sh
-   php composer.phar require lesstif/php-jira-rest-client
+   php composer.phar require mironoff/php-jira-rest-client
    ```
     or add the following to your composer.json file.
    ```json
    {
        "require": {
-           "lesstif/php-jira-rest-client": "^1.19"
+           "mironoff/php-jira-rest-client": "^1.19"
        }
    }
    ```
