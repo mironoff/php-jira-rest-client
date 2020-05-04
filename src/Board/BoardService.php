@@ -1,15 +1,15 @@
 <?php
 
-namespace JiraRestApi\Board;
+namespace mironoff\JiraRestApi\Board;
 
-use JiraRestApi\AgileApiTrait;
-use JiraRestApi\Configuration\ConfigurationInterface;
-use JiraRestApi\Epic\Epic;
-use JiraRestApi\Issue\AgileIssue;
-use JiraRestApi\Sprint\Sprint;
+use mironoff\JiraRestApi\AgileApiTrait;
+use mironoff\JiraRestApi\Configuration\ConfigurationInterface;
+use mironoff\JiraRestApi\Epic\Epic;
+use mironoff\JiraRestApi\Issue\AgileIssue;
+use mironoff\JiraRestApi\Sprint\Sprint;
 use Psr\Log\LoggerInterface;
 
-class BoardService extends \JiraRestApi\JiraClient
+class BoardService extends \mironoff\JiraRestApi\JiraClient
 {
     use AgileApiTrait;
 
@@ -26,7 +26,7 @@ class BoardService extends \JiraRestApi\JiraClient
      *
      * @param array $paramArray
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      *
      * @return \ArrayObject|Board[]|null array of Board class
      */

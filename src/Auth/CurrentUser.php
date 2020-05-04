@@ -1,8 +1,8 @@
 <?php
 
-namespace JiraRestApi\Auth;
+namespace mironoff\JiraRestApi\Auth;
 
-use JiraRestApi\ClassSerialize;
+use mironoff\JiraRestApi\ClassSerialize;
 
 class CurrentUser implements \JsonSerializable
 {
@@ -19,7 +19,7 @@ class CurrentUser implements \JsonSerializable
     public $name;
 
     /**
-     * @var \JiraRestApi\Auth\LoginInfo
+     * @var \mironoff\JiraRestApi\Auth\LoginInfo
      */
     public $loginInfo;
 

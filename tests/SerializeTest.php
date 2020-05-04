@@ -1,7 +1,7 @@
 <?php
 
-use JiraRestApi\Dumper;
-use JiraRestApi\Issue\Reporter;
+use mironoff\JiraRestApi\Dumper;
+use mironoff\JiraRestApi\Issue\Reporter;
 
 class SerializeTest extends PHPUnit_Framework_TestCase
 {

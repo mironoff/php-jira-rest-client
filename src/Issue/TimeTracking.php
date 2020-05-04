@@ -6,9 +6,9 @@
  * Time: 21:27.
  */
 
-namespace JiraRestApi\Issue;
+namespace mironoff\JiraRestApi\Issue;
 
-use JiraRestApi\ClassSerialize;
+use mironoff\JiraRestApi\ClassSerialize;
 
 /**
  * Class TimeTracking.

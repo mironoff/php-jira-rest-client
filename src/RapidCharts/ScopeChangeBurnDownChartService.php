@@ -1,12 +1,12 @@
 <?php
 
-namespace JiraRestApi\RapidCharts;
+namespace mironoff\JiraRestApi\RapidCharts;
 
-use JiraRestApi\Configuration\ConfigurationInterface;
-use JiraRestApi\GreenHopperTrait;
+use mironoff\JiraRestApi\Configuration\ConfigurationInterface;
+use mironoff\JiraRestApi\GreenHopperTrait;
 use Psr\Log\LoggerInterface;
 
-class ScopeChangeBurnDownChartService extends \JiraRestApi\JiraClient
+class ScopeChangeBurnDownChartService extends \mironoff\JiraRestApi\JiraClient
 {
     use GreenHopperTrait;
 

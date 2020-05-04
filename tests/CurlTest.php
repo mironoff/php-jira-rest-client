@@ -1,6 +1,6 @@
 <?php
 
-use JiraRestApi\HTTPException;
+use mironoff\JiraRestApi\HTTPException;
 
 class CurlTest extends PHPUnit_Framework_TestCase
 {
@@ -12,7 +12,7 @@ class CurlTest extends PHPUnit_Framework_TestCase
 
             $config['host'] = 'http://requestb.in/vqid8qvq';
 
-            $j = new \JiraRestApi\JiraClient($config, getOptions());
+            $j = new \mironoff\JiraRestApi\JiraClient($config, getOptions());
 
             $post_data = ['name' => 'value'];
 

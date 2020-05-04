@@ -1,10 +1,10 @@
 <?php
 
-namespace JiraRestApi\Project;
+namespace mironoff\JiraRestApi\Project;
 
 /**
- * @deprecated Please use \JiraRestApi\Component\Component
+ * @deprecated Please use \mironoff\JiraRestApi\Component\Component
  */
-class Component extends \JiraRestApi\Component\Component
+class Component extends \mironoff\JiraRestApi\Component\Component
 {
 }

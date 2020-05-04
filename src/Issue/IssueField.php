@@ -1,8 +1,8 @@
 <?php
 
-namespace JiraRestApi\Issue;
+namespace mironoff\JiraRestApi\Issue;
 
-use JiraRestApi\ClassSerialize;
+use mironoff\JiraRestApi\ClassSerialize;
 
 class IssueField implements \JsonSerializable
 {
@@ -14,10 +14,10 @@ class IssueField implements \JsonSerializable
     /** @var array */
     public $progress;
 
-    /** @var \JiraRestApi\Issue\TimeTracking */
+    /** @var \mironoff\JiraRestApi\Issue\TimeTracking */
     public $timeTracking;
 
-    /** @var \JiraRestApi\Issue\IssueType */
+    /** @var \mironoff\JiraRestApi\Issue\IssueType */
     public $issuetype;
 
     /** @var Reporter|null */
@@ -32,25 +32,25 @@ class IssueField implements \JsonSerializable
     /** @var string|null */
     public $description;
 
-    /** @var \JiraRestApi\Issue\Priority|null */
+    /** @var \mironoff\JiraRestApi\Issue\Priority|null */
     public $priority;
 
-    /** @var \JiraRestApi\Issue\IssueStatus */
+    /** @var \mironoff\JiraRestApi\Issue\IssueStatus */
     public $status;
 
     /** @var array */
     public $labels;
 
-    /** @var \JiraRestApi\Project\Project */
+    /** @var \mironoff\JiraRestApi\Project\Project */
     public $project;
 
     /** @var string|null */
     public $environment;
 
-    /** @var \JiraRestApi\Issue\Component[] */
+    /** @var \mironoff\JiraRestApi\Issue\Component[] */
     public $components;
 
-    /** @var \JiraRestApi\Issue\Comments */
+    /** @var \mironoff\JiraRestApi\Issue\Comments */
     public $comment;
 
     /** @var object */
@@ -62,7 +62,7 @@ class IssueField implements \JsonSerializable
     /** @var array */
     public $fixVersions;
 
-    /** @var \JiraRestApi\Issue\Reporter|null */
+    /** @var \mironoff\JiraRestApi\Issue\Reporter|null */
     public $creator;
 
     /** @var object|null */
@@ -71,13 +71,13 @@ class IssueField implements \JsonSerializable
     /** @var object|null */
     public $worklog;
 
-    /** @var \JiraRestApi\Issue\Reporter|null */
+    /** @var \mironoff\JiraRestApi\Issue\Reporter|null */
     public $assignee;
 
-    /** @var \JiraRestApi\Issue\Version[] */
+    /** @var \mironoff\JiraRestApi\Issue\Version[] */
     public $versions;
 
-    /** @var \JiraRestApi\Issue\Attachment[] */
+    /** @var \mironoff\JiraRestApi\Issue\Attachment[] */
     public $attachment;
 
     /** @var string|null */
@@ -98,7 +98,7 @@ class IssueField implements \JsonSerializable
     /** @var array */
     public $issuelinks;
 
-    /** @var \JiraRestApi\Issue\Issue[] */
+    /** @var \mironoff\JiraRestApi\Issue\Issue[] */
     public $subtasks;
 
     /** @var int */
@@ -122,13 +122,13 @@ class IssueField implements \JsonSerializable
     /** @var array|null */
     public $customFields;
 
-    /** @var \JiraRestApi\Issue\SecurityScheme|null */
+    /** @var \mironoff\JiraRestApi\Issue\SecurityScheme|null */
     public $security;
 
     public function __construct($updateIssue = false)
     {
         if ($updateIssue != true) {
-            $this->project = new \JiraRestApi\Project\Project();
+            $this->project = new \mironoff\JiraRestApi\Project\Project();
 
             $this->assignee = new Reporter();
             // priority maybe empty.
@@ -310,8 +310,8 @@ class IssueField implements \JsonSerializable
      *
      * REST API V3 must use addDescriptionXXXX
      *
-     * @see \JiraRestApi\Issue\IssueFieldV3::addDescriptionHeading
-     * @see \JiraRestApi\Issue\IssueFieldV3::addDescriptionParagraph
+     * @see \mironoff\JiraRestApi\Issue\IssueFieldV3::addDescriptionHeading
+     * @see \mironoff\JiraRestApi\Issue\IssueFieldV3::addDescriptionParagraph
      *
      * @param string|null $description
      *

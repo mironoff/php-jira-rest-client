@@ -1,13 +1,13 @@
 <?php
 
-namespace JiraRestApi\Project;
+namespace mironoff\JiraRestApi\Project;
 
-use JiraRestApi\Issue\IssueType;
-use JiraRestApi\Issue\Reporter;
-use JiraRestApi\Issue\Version;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueType;
+use mironoff\JiraRestApi\Issue\Reporter;
+use mironoff\JiraRestApi\Issue\Version;
+use mironoff\JiraRestApi\JiraException;
 
-class ProjectService extends \JiraRestApi\JiraClient
+class ProjectService extends \mironoff\JiraRestApi\JiraClient
 {
     private $uri = '/project';
 
@@ -16,7 +16,7 @@ class ProjectService extends \JiraRestApi\JiraClient
      *
      * @param array $paramArray
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      *
      * @return Project[] array of Project class
      */
@@ -27,7 +27,7 @@ class ProjectService extends \JiraRestApi\JiraClient
         $prjs = $this->json_mapper->mapArray(
             json_decode($ret, false),
             new \ArrayObject(),
-            '\JiraRestApi\Project\Project'
+            '\mironoff\JiraRestApi\Project\Project'
         );
 
         return $prjs;
@@ -39,7 +39,7 @@ class ProjectService extends \JiraRestApi\JiraClient
      *
      * @param string|int $projectIdOrKey projectName or Project Key(Ex: Test, MyProj)
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      * @throws \JsonMapper_Exception
      *
      * @return Project|object
@@ -64,7 +64,7 @@ class ProjectService extends \JiraRestApi\JiraClient
      *
      * @param string|int projectIdOrKey Project Key
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      *
      * @return Reporter[]
      */
@@ -82,7 +82,7 @@ class ProjectService extends \JiraRestApi\JiraClient
     /**
      * @param string|int $projectIdOrKey
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      *
      * @return IssueType[]
      */
@@ -98,7 +98,7 @@ class ProjectService extends \JiraRestApi\JiraClient
     }
 
     /**
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      *
      * @return ProjectType[]
      */
@@ -119,7 +119,7 @@ class ProjectService extends \JiraRestApi\JiraClient
     /**
      * @param string|int $key
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      * @throws \JsonMapper_Exception
      *
      * @return ProjectType|object
@@ -141,7 +141,7 @@ class ProjectService extends \JiraRestApi\JiraClient
     /**
      * @param string|int $key
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      * @throws \JsonMapper_Exception
      *
      * @return ProjectType|object
@@ -166,7 +166,7 @@ class ProjectService extends \JiraRestApi\JiraClient
      * @param string|int $projectIdOrKey
      * @param array      $queryParam
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      *
      * @return Version[] array of version
      */
@@ -194,7 +194,7 @@ class ProjectService extends \JiraRestApi\JiraClient
         $versions = $this->json_mapper->mapArray(
             $json->values,
             new \ArrayObject(),
-            '\JiraRestApi\Issue\Version'
+            '\mironoff\JiraRestApi\Issue\Version'
         );
 
         return $versions;
@@ -205,7 +205,7 @@ class ProjectService extends \JiraRestApi\JiraClient
      *
      * @param string|int $projectIdOrKey
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      *
      * @return Version[] array of version
      */
@@ -218,7 +218,7 @@ class ProjectService extends \JiraRestApi\JiraClient
         $versions = $this->json_mapper->mapArray(
             json_decode($ret, false),
             new \ArrayObject(),
-            '\JiraRestApi\Issue\Version'
+            '\mironoff\JiraRestApi\Issue\Version'
         );
 
         return $versions;
@@ -230,7 +230,7 @@ class ProjectService extends \JiraRestApi\JiraClient
      * @param string|int $projectIdOrKey
      * @param string     $versionName
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      *
      * @return Version version
      */
@@ -243,7 +243,7 @@ class ProjectService extends \JiraRestApi\JiraClient
         $versions = $this->json_mapper->mapArray(
             json_decode($ret, false),
             new \ArrayObject(),
-            '\JiraRestApi\Issue\Version'
+            '\mironoff\JiraRestApi\Issue\Version'
         );
 
         foreach ($versions as $v) {

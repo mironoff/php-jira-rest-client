@@ -1,6 +1,6 @@
 <?php
 
-namespace JiraRestApi;
+namespace mironoff\JiraRestApi;
 
 use Symfony\Component\VarDumper\Cloner\VarCloner;
 use Symfony\Component\VarDumper\Dumper\CliDumper;

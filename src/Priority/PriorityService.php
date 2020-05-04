@@ -1,20 +1,20 @@
 <?php
 
-namespace JiraRestApi\Priority;
+namespace mironoff\JiraRestApi\Priority;
 
-use JiraRestApi\Issue\Priority;
+use mironoff\JiraRestApi\Issue\Priority;
 
 /**
  * Class to query priority.
  */
-class PriorityService extends \JiraRestApi\JiraClient
+class PriorityService extends \mironoff\JiraRestApi\JiraClient
 {
     private $uri = '/priority';
 
     /**
      * Function to get all priorities.
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      * @throws \JsonMapper_Exception
      *
      * @return Priority|object Priority class
@@ -40,10 +40,10 @@ class PriorityService extends \JiraRestApi\JiraClient
      *
      * @param $priorityId priority id
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      * @throws \JsonMapper_Exception
      *
-     * @return \JiraRestApi\Priority\Priority
+     * @return \mironoff\JiraRestApi\Priority\Priority
      */
     public function get($priorityId)
     {

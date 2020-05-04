@@ -1,15 +1,15 @@
 <?php
 
-namespace JiraRestApi\User;
+namespace mironoff\JiraRestApi\User;
 
-use JiraRestApi\Issue\Reporter;
+use mironoff\JiraRestApi\Issue\Reporter;
 
 /**
  * Class to perform all user related queries.
  *
  * @author Anik
  */
-class UserService extends \JiraRestApi\JiraClient
+class UserService extends \mironoff\JiraRestApi\JiraClient
 {
     private $uri = '/user';
 
@@ -18,7 +18,7 @@ class UserService extends \JiraRestApi\JiraClient
      *
      * @param User|array $user
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      * @throws \JsonMapper_Exception
      *
      * @return User|object User class
@@ -43,7 +43,7 @@ class UserService extends \JiraRestApi\JiraClient
      * @param array $paramArray Possible values for $paramArray 'username', 'key'.
      *                          "Either the 'username' or the 'key' query parameters need to be provided".
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      * @throws \JsonMapper_Exception
      *
      * @return User|object User class
@@ -67,7 +67,7 @@ class UserService extends \JiraRestApi\JiraClient
      *
      * @param array $paramArray
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      * @throws \JsonMapper_Exception
      *
      * @return User[]
@@ -99,7 +99,7 @@ class UserService extends \JiraRestApi\JiraClient
      *
      * @param array $paramArray
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      * @throws \JsonMapper_Exception
      *
      * @return User[]
@@ -132,7 +132,7 @@ class UserService extends \JiraRestApi\JiraClient
      *
      * @param array $paramArray
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      * @throws \JsonMapper_Exception
      *
      * @return User[]
@@ -165,7 +165,7 @@ class UserService extends \JiraRestApi\JiraClient
      *
      * @param $paramArray
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      *
      * @return bool
      */
@@ -181,7 +181,7 @@ class UserService extends \JiraRestApi\JiraClient
     /**
      * get a user info details.
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      *
      * @return Reporter user Object
      */
@@ -200,7 +200,7 @@ class UserService extends \JiraRestApi\JiraClient
     /**
      * @param array $paramArray
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      * @throws \JsonMapper_Exception
      *
      * @return User[]

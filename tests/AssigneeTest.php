@@ -1,9 +1,9 @@
 <?php
 
-use JiraRestApi\Dumper;
-use JiraRestApi\Issue\IssueField;
-use JiraRestApi\Issue\Reporter;
-use JiraRestApi\Issue\Version;
+use mironoff\JiraRestApi\Dumper;
+use mironoff\JiraRestApi\Issue\IssueField;
+use mironoff\JiraRestApi\Issue\Reporter;
+use mironoff\JiraRestApi\Issue\Version;
 use \Mockery as m;
 
 class AssigneeTest extends PHPUnit_Framework_TestCase
@@ -14,7 +14,7 @@ class AssigneeTest extends PHPUnit_Framework_TestCase
     public function setUp()
     {
         $this->mapper = new JsonMapper();
-        $this->mapper->undefinedPropertyHandler = [new \JiraRestApi\JsonMapperHelper(), 'setUndefinedProperty'];
+        $this->mapper->undefinedPropertyHandler = [new \mironoff\JiraRestApi\JsonMapperHelper(), 'setUndefinedProperty'];
         $this->mapper->classMap['\\'.\DateTimeInterface::class] = \DateTime::class;
     }
 

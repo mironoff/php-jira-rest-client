@@ -1,9 +1,9 @@
 <?php
 
-namespace JiraRestApi;
+namespace mironoff\JiraRestApi;
 
-use JiraRestApi\Configuration\ConfigurationInterface;
-use JiraRestApi\Configuration\DotEnvConfiguration;
+use mironoff\JiraRestApi\Configuration\ConfigurationInterface;
+use mironoff\JiraRestApi\Configuration\DotEnvConfiguration;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger as Logger;
 use Psr\Log\LoggerInterface;
@@ -86,8 +86,8 @@ class JiraClient
 
         $this->json_mapper = new \JsonMapper();
 
-        // Fix "\JiraRestApi\JsonMapperHelper::class" syntax error, unexpected 'class' (T_CLASS), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
-        $this->json_mapper->undefinedPropertyHandler = [new \JiraRestApi\JsonMapperHelper(), 'setUndefinedProperty'];
+        // Fix "\mironoff\JiraRestApi\JsonMapperHelper::class" syntax error, unexpected 'class' (T_CLASS), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+        $this->json_mapper->undefinedPropertyHandler = [new \mironoff\JiraRestApi\JsonMapperHelper(), 'setUndefinedProperty'];
 
         // Properties that are annotated with `@var \DateTimeInterface` should result in \DateTime objects being created.
         $this->json_mapper->classMap['\\'.\DateTimeInterface::class] = \DateTime::class;
@@ -411,7 +411,7 @@ class JiraClient
      * @param $body
      * @param $result_code
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      */
     protected function closeCURLHandle(array $chArr, $mh, $body, $result_code)
     {

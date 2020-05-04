@@ -1,8 +1,8 @@
 <?php
 
-namespace JiraRestApi\Field;
+namespace mironoff\mironoff\JiraRestApi\Field;
 
-use JiraRestApi\ClassSerialize;
+use mironoff\mironoff\JiraRestApi\ClassSerialize;
 
 /**
  * Class Field.

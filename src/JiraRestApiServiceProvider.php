@@ -1,12 +1,12 @@
 <?php
 
-namespace JiraRestApi;
+namespace mironoff\JiraRestApi;
 
 use Illuminate\Support\ServiceProvider;
-use JiraRestApi\Configuration\ConfigurationInterface;
-use JiraRestApi\Configuration\DotEnvConfiguration;
+use mironoff\JiraRestApi\Configuration\ConfigurationInterface;
+use mironoff\JiraRestApi\Configuration\DotEnvConfiguration;
 
-class JiraRestApiServiceProvider extends ServiceProvider
+class mironoff\JiraRestApiServiceProvider extends ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.

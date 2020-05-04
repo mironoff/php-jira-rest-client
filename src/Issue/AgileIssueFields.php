@@ -1,15 +1,15 @@
 <?php
 
-namespace JiraRestApi\Issue;
+namespace mironoff\JiraRestApi\Issue;
 
 class AgileIssueFields extends IssueFieldV3
 {
-    /** @var \JiraRestApi\Epic\Epic|null */
+    /** @var \mironoff\JiraRestApi\Epic\Epic|null */
     public $epic;
 
-    /** @var \JiraRestApi\Sprint\Sprint|null */
+    /** @var \mironoff\JiraRestApi\Sprint\Sprint|null */
     public $sprint;
 
-    /** @var \JiraRestApi\Sprint\Sprint[]|null */
+    /** @var \mironoff\JiraRestApi\Sprint\Sprint[]|null */
     public $closedSprints;
 }

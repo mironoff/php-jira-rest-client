@@ -1,8 +1,8 @@
 <?php
 
-namespace JiraRestApi\Configuration;
+namespace mironoff\JiraRestApi\Configuration;
 
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\JiraException;
 
 /**
  * Class DotEnvConfiguration.

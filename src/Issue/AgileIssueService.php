@@ -1,12 +1,12 @@
 <?php
 
-namespace JiraRestApi\Issue;
+namespace mironoff\JiraRestApi\Issue;
 
-use JiraRestApi\AgileApiTrait;
-use JiraRestApi\Configuration\ConfigurationInterface;
+use mironoff\JiraRestApi\AgileApiTrait;
+use mironoff\JiraRestApi\Configuration\ConfigurationInterface;
 use Psr\Log\LoggerInterface;
 
-class AgileIssueService extends \JiraRestApi\JiraClient
+class AgileIssueService extends \mironoff\JiraRestApi\JiraClient
 {
     use AgileApiTrait;
 

@@ -1,20 +1,20 @@
 <?php
 
-namespace JiraRestApi\Auth;
+namespace mironoff\JiraRestApi\Auth;
 
-use JiraRestApi\ClassSerialize;
+use mironoff\JiraRestApi\ClassSerialize;
 
 class AuthSession implements \JsonSerializable
 {
     use ClassSerialize;
 
     /**
-     * @var \JiraRestApi\Auth\SessionInfo
+     * @var \mironoff\JiraRestApi\Auth\SessionInfo
      */
     public $session;
 
     /**
-     * @var \JiraRestApi\Auth\LoginInfo
+     * @var \mironoff\JiraRestApi\Auth\LoginInfo
      */
     public $loginInfo;
 

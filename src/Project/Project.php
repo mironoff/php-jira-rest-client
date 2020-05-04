@@ -1,9 +1,9 @@
 <?php
 
-namespace JiraRestApi\Project;
+namespace mironoff\JiraRestApi\Project;
 
-use JiraRestApi\ClassSerialize;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\ClassSerialize;
+use mironoff\JiraRestApi\JiraException;
 
 class Project implements \JsonSerializable
 {
@@ -69,16 +69,16 @@ class Project implements \JsonSerializable
     public $lead;
 
     /**
-     * ComponentList [\JiraRestApi\Project\Component].
+     * ComponentList [\mironoff\JiraRestApi\Project\Component].
      *
-     * @var \JiraRestApi\Project\Component[]
+     * @var \mironoff\JiraRestApi\Project\Component[]
      */
     public $components;
 
     /**
-     * IssueTypeList [\JiraRestApi\Issue\IssueType].
+     * IssueTypeList [\mironoff\JiraRestApi\Issue\IssueType].
      *
-     * @var \JiraRestApi\Issue\IssueType[]
+     * @var \mironoff\JiraRestApi\Issue\IssueType[]
      */
     public $issueTypes;
 

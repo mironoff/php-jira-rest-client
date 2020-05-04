@@ -1,9 +1,9 @@
 <?php
 
-use JiraRestApi\Dumper;
-use JiraRestApi\Group\Group;
-use JiraRestApi\Group\GroupService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Dumper;
+use mironoff\JiraRestApi\Group\Group;
+use mironoff\JiraRestApi\Group\GroupService;
+use mironoff\JiraRestApi\JiraException;
 
 class groupTest extends PHPUnit_Framework_TestCase
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace JiraRestApi\IssueLink;
+namespace mironoff\JiraRestApi\IssueLink;
 
-use JiraRestApi\ClassSerialize;
-use JiraRestApi\Issue\Comment;
+use mironoff\JiraRestApi\ClassSerialize;
+use mironoff\JiraRestApi\Issue\Comment;
 
 class IssueLink implements \JsonSerializable
 {
@@ -12,13 +12,13 @@ class IssueLink implements \JsonSerializable
     /** @var array */
     public $type;
 
-    /** @var \JiraRestApi\Issue\Issue */
+    /** @var \mironoff\JiraRestApi\Issue\Issue */
     public $inwardIssue;
 
-    /** @var \JiraRestApi\Issue\Issue */
+    /** @var \mironoff\JiraRestApi\Issue\Issue */
     public $outwardIssue;
 
-    /** @var \JiraRestApi\Issue\Comment */
+    /** @var \mironoff\JiraRestApi\Issue\Comment */
     public $comment;
 
     public function jsonSerialize()
@@ -65,7 +65,7 @@ class IssueLink implements \JsonSerializable
     }
 
     /**
-     * @param string|Comment $comment string or \JiraRestApi\Issue\Comment instance
+     * @param string|Comment $comment string or \mironoff\JiraRestApi\Issue\Comment instance
      *
      * @return $this
      */

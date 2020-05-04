@@ -1,9 +1,9 @@
 <?php
 
-use JiraRestApi\Dumper;
-use JiraRestApi\HTTPException;
+use mironoff\JiraRestApi\Dumper;
+use mironoff\JiraRestApi\HTTPException;
 
-use JiraRestApi\Priority\PriorityService;
+use mironoff\JiraRestApi\Priority\PriorityService;
 
 class PriorityTest extends PHPUnit_Framework_TestCase
 {

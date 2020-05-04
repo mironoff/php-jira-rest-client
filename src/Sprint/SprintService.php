@@ -6,12 +6,12 @@
  * Time: 17:28.
  */
 
-namespace JiraRestApi\Sprint;
+namespace mironoff\JiraRestApi\Sprint;
 
-use JiraRestApi\Configuration\ConfigurationInterface;
-use JiraRestApi\Issue\Issue;
-use JiraRestApi\JiraClient;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Configuration\ConfigurationInterface;
+use mironoff\JiraRestApi\Issue\Issue;
+use mironoff\JiraRestApi\JiraClient;
+use mironoff\JiraRestApi\JiraException;
 use Psr\Log\LoggerInterface;
 
 class SprintService extends JiraClient

@@ -1,6 +1,6 @@
 <?php
 
-use JiraRestApi\Project\ProjectService;
+use mironoff\JiraRestApi\Project\ProjectService;
 
 class ProjectTest extends PHPUnit_Framework_TestCase
 {
@@ -10,7 +10,7 @@ class ProjectTest extends PHPUnit_Framework_TestCase
 
         $p = $proj->get('TEST');
 
-        $this->assertTrue($p instanceof JiraRestApi\Project\Project);
+        $this->assertTrue($p instanceof mironoff\JiraRestApi\Project\Project);
         $this->assertTrue(strlen($p->key) > 0);
         $this->assertTrue(!empty($p->id));
         $this->assertTrue(strlen($p->name) > 0);
@@ -24,7 +24,7 @@ class ProjectTest extends PHPUnit_Framework_TestCase
         $prjs = $proj->getAllProjects();
 
         foreach ($prjs as $p) {
-            $this->assertTrue($p instanceof JiraRestApi\Project\Project);
+            $this->assertTrue($p instanceof mironoff\JiraRestApi\Project\Project);
             $this->assertTrue(strlen($p->key) > 0);
             $this->assertTrue(!empty($p->id));
             $this->assertTrue(strlen($p->name) > 0);
@@ -39,7 +39,7 @@ class ProjectTest extends PHPUnit_Framework_TestCase
         $prjtyps = $proj->getProjectTypes();
 
         foreach ($prjtyps as $pt) {
-            $this->assertTrue($pt instanceof JiraRestApi\Project\ProjectType);
+            $this->assertTrue($pt instanceof mironoff\JiraRestApi\Project\ProjectType);
             $this->assertTrue(strlen($pt->key) > 0);
             $this->assertTrue(strlen($pt->formattedKey) > 0);
             $this->assertTrue(strlen($pt->descriptionI18nKey) > 0);
@@ -54,7 +54,7 @@ class ProjectTest extends PHPUnit_Framework_TestCase
 
         $prjtyp = $proj->getProjectType('software');
 
-        $this->assertTrue($prjtyp instanceof JiraRestApi\Project\ProjectType);
+        $this->assertTrue($prjtyp instanceof mironoff\JiraRestApi\Project\ProjectType);
         $this->assertTrue(strlen($prjtyp->key) > 0);
         $this->assertTrue(strlen($prjtyp->formattedKey) > 0);
         $this->assertTrue(strlen($prjtyp->descriptionI18nKey) > 0);
@@ -63,7 +63,7 @@ class ProjectTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException JiraRestApi\JiraException
+     * @expectedException mironoff\JiraRestApi\JiraException
      */
     public function testGetProjectTypeException()
     {
@@ -78,7 +78,7 @@ class ProjectTest extends PHPUnit_Framework_TestCase
 
         $prjtyp = $proj->getAccessibleProjectType('business');
 
-        $this->assertTrue($prjtyp instanceof JiraRestApi\Project\ProjectType);
+        $this->assertTrue($prjtyp instanceof mironoff\JiraRestApi\Project\ProjectType);
         $this->assertTrue(strlen($prjtyp->key) > 0);
         $this->assertTrue(strlen($prjtyp->formattedKey) > 0);
         $this->assertTrue(strlen($prjtyp->descriptionI18nKey) > 0);
@@ -87,7 +87,7 @@ class ProjectTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException JiraRestApi\JiraException
+     * @expectedException mironoff\JiraRestApi\JiraException
      */
     public function testGetProjectAccessibleException()
     {

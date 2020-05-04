@@ -6,7 +6,7 @@
  * Time: 20:53.
  */
 
-namespace JiraRestApi;
+namespace mironoff\JiraRestApi;
 
 /**
  * Class JiraException.

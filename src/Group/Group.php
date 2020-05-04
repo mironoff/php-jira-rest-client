@@ -1,8 +1,8 @@
 <?php
 
-namespace JiraRestApi\Group;
+namespace mironoff\mironoff\JiraRestApi\Group;
 
-use JiraRestApi\ClassSerialize;
+use mironoff\mironoff\JiraRestApi\ClassSerialize;
 
 /**
  * Class Group.

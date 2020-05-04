@@ -6,7 +6,7 @@
  * Time: 21:58.
  */
 
-namespace JiraRestApi\Configuration;
+namespace mironoff\JiraRestApi\Configuration;
 
 /**
  * Interface ConfigurationInterface.

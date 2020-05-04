@@ -1,13 +1,13 @@
 <?php
 
-namespace JiraRestApi\Issue;
+namespace mironoff\JiraRestApi\Issue;
 
-use JiraRestApi\JsonSerializableTrait;
+use mironoff\JiraRestApi\JsonSerializableTrait;
 
 class AgileIssue extends Issue
 {
     use JsonSerializableTrait;
 
-    /** @var \JiraRestApi\Issue\AgileIssueFields */
+    /** @var \mironoff\JiraRestApi\Issue\AgileIssueFields */
     public $fields;
 }

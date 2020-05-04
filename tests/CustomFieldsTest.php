@@ -1,9 +1,9 @@
 <?php
 
-use JiraRestApi\Dumper;
-use JiraRestApi\Field\Field;
-use JiraRestApi\Field\FieldService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Dumper;
+use mironoff\JiraRestApi\Field\Field;
+use mironoff\JiraRestApi\Field\FieldService;
+use mironoff\JiraRestApi\JiraException;
 
 class CustomFieldsTest extends PHPUnit_Framework_TestCase
 {

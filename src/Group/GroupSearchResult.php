@@ -1,8 +1,8 @@
 <?php
 
-namespace JiraRestApi\Group;
+namespace mironoff\mironoff\JiraRestApi\Group;
 
-use JiraRestApi\ClassSerialize;
+use mironoff\mironoff\JiraRestApi\ClassSerialize;
 
 /**
  * Class GroupSearchResult.
@@ -36,7 +36,7 @@ class GroupSearchResult implements \JsonSerializable
      */
     public $total;
 
-    /** @var \JiraRestApi\User\User[] */
+    /** @var \mironoff\mironoff\JiraRestApi\User\User[] */
     public $values;
 
     public function jsonSerialize()

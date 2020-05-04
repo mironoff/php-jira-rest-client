@@ -1,8 +1,8 @@
 <?php
 
-use JiraRestApi\Issue\IssueField;
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueField;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\JiraException;
 
 class SubTaskTest extends PHPUnit_Framework_TestCase
 {

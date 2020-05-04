@@ -1,6 +1,6 @@
 <?php
 
-namespace JiraRestApi\Issue;
+namespace mironoff\JiraRestApi\Issue;
 
 /**
  * Issue ChangeLog.
@@ -18,7 +18,7 @@ class ChangeLog implements \JsonSerializable
     /** @var int */
     public $total;
 
-    /** @var \JiraRestApi\Issue\History[]|null */
+    /** @var \mironoff\JiraRestApi\Issue\History[]|null */
     public $histories;
 
     public function jsonSerialize()

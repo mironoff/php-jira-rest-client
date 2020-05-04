@@ -1,13 +1,14 @@
 <?php
 
-namespace JiraRestApi\Attachment;
+namespace mironoff\JiraRestApi\Attachment;
 
-use JiraRestApi\Issue\Attachment;
+use mironoff\JiraRestApi\Issue\Attachment;
+use mironoff\JiraRestApi\JiraException;
 
 /**
  * Class AttachmentService.
  */
-class AttachmentService extends \JiraRestApi\JiraClient
+class AttachmentService extends \mironoff\JiraRestApi\JiraClient
 {
     private $uri = '/attachment/';
 
@@ -20,10 +21,10 @@ class AttachmentService extends \JiraRestApi\JiraClient
      * @mode int outDir creation mode.
      * @recursive boolean Allows the creation of nested directories specified in the pathname.
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws JiraException
      * @throws \JsonMapper_Exception
      *
-     * @return \JiraRestApi\Issue\Attachment
+     * @return Attachment
      */
     public function get($id, $outDir = null, $overwrite = false, $mode = 0777, $recursive = true)
     {
@@ -62,7 +63,7 @@ class AttachmentService extends \JiraRestApi\JiraClient
      *
      * @param $id string|int attachment id
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws JiraException
      *
      * @return bool
      */

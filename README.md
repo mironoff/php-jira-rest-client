@@ -96,8 +96,8 @@ this library not fully supported JIRA REST API V3 yet.
 create Service class with ArrayConfiguration parameter.
 
 ```php
-use JiraRestApi\Configuration\ArrayConfiguration;
-use JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\Configuration\ArrayConfiguration;
+use mironoff\JiraRestApi\Issue\IssueService;
 
 $iss = new IssueService(new ArrayConfiguration(
           array(
@@ -225,9 +225,9 @@ Create a new project.
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Project\ProjectService;
-use JiraRestApi\Project\Project;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Project\ProjectService;
+use mironoff\JiraRestApi\Project\Project;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $p = new Project();
@@ -273,9 +273,9 @@ Values available for the assigneeType field are: "PROJECT_LEAD" and "UNASSIGNED"
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Project\ProjectService;
-use JiraRestApi\Project\Project;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Project\ProjectService;
+use mironoff\JiraRestApi\Project\Project;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $p = new Project();
@@ -309,8 +309,8 @@ Deletes a project.
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Project\ProjectService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Project\ProjectService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $proj = new ProjectService();
@@ -331,8 +331,8 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Project\ProjectService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Project\ProjectService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $proj = new ProjectService();
@@ -353,8 +353,8 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Project\ProjectService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Project\ProjectService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $proj = new ProjectService();
@@ -382,8 +382,8 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Project\ProjectService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Project\ProjectService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $proj = new ProjectService();
@@ -415,8 +415,8 @@ get all project's versions.
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Project\ProjectService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Project\ProjectService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $proj = new ProjectService();
@@ -424,7 +424,7 @@ try {
     $vers = $proj->getVersions('TEST');
 
     foreach ($vers as $v) {
-        // $v is  JiraRestApi\Issue\Version
+        // $v is  mironoff\JiraRestApi\Issue\Version
         var_dump($v);
     }
 } catch (JiraRestApi\JiraException $e) {
@@ -441,8 +441,8 @@ or get pagenated project's versions.
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Project\ProjectService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Project\ProjectService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $param = [
@@ -457,7 +457,7 @@ try {
     $vers = $proj->getVersionsPagenated('TEST', $param);
 
     foreach ($vers as $v) {
-        // $v is  JiraRestApi\Issue\Version
+        // $v is  mironoff\JiraRestApi\Issue\Version
         var_dump($v);
     }
 } catch (JiraRestApi\JiraException $e) {
@@ -475,9 +475,9 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Field\Field;
-use JiraRestApi\Field\FieldService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Field\Field;
+use mironoff\JiraRestApi\Field\FieldService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $fieldService = new FieldService();
@@ -499,9 +499,9 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Field\Field;
-use JiraRestApi\Field\FieldService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Field\Field;
+use mironoff\JiraRestApi\Field\FieldService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $field = new Field();
@@ -533,8 +533,8 @@ Returns a full representation of the issue for the given issue key.
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $issueService = new IssueService();
@@ -573,9 +573,9 @@ You can access the custom field associated with issue through *$issue->fields->c
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\Issue\IssueField;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\Issue\IssueField;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $issueField = new IssueField();
@@ -646,9 +646,9 @@ Currently, not tested for all custom field types.
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\Issue\IssueField;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\Issue\IssueField;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $issueFieldOne = new IssueField();
@@ -695,9 +695,9 @@ for example
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\Issue\IssueField;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\Issue\IssueField;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $issueField = new IssueField();
@@ -732,9 +732,9 @@ REST API V3' description field is complicated.
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\Issue\IssueFieldV3;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\Issue\IssueFieldV3;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $issueField = new IssueFieldV3();
@@ -815,8 +815,8 @@ Currently, not tested for all custom field types.
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\JiraException;
 
 $issueKey = "TEST-879";
 
@@ -843,9 +843,9 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\Issue\IssueField;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\Issue\IssueField;
+use mironoff\JiraRestApi\JiraException;
 
 $issueKey = "TEST-879";
 
@@ -889,8 +889,8 @@ This function is a convenient wrapper for add or remove label in the issue.
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $issueKey = 'TEST-123';
@@ -925,8 +925,8 @@ This function is a convenient wrapper for add or remove fix version in the issue
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $issueKey = 'TEST-123';
@@ -961,8 +961,8 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\JiraException;
 
 $issueKey = "TEST-879";
 
@@ -987,8 +987,8 @@ REST API V3(JIRA Cloud) users must use *changeAssigneeByAccountId* method with a
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\JiraException;
 
 $issueKey = "TEST-879";
 
@@ -1013,8 +1013,8 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\JiraException;
 
 $issueKey = "TEST-879";
 
@@ -1039,9 +1039,9 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\Issue\Comment;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\Issue\Comment;
+use mironoff\JiraRestApi\JiraException;
 
 $issueKey = "TEST-879";
 
@@ -1078,8 +1078,8 @@ COMMENT;
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\JiraException;
 
 $issueKey = "TEST-879";
 
@@ -1104,8 +1104,8 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\JiraException;
 
 $issueKey = "TEST-879";
 
@@ -1130,9 +1130,9 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\JiraException;
-use JiraRestApi\Issue\Comment;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\Comment;
 
 $issueKey = "TEST-879";
 
@@ -1166,9 +1166,9 @@ i.e. `$transition->setTransitionName('Some Status')`
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\Issue\Transition;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\Issue\Transition;
+use mironoff\JiraRestApi\JiraException;
 
 $issueKey = "TEST-879";
 
@@ -1195,8 +1195,8 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\JiraException;
 
 $jql = 'project not in (TEST)  and assignee = currentUser() and status in (Resolved, closed)';
 
@@ -1218,8 +1218,8 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\JiraException;
 
 $jql = 'project not in (TEST)  and assignee = currentUser() and status in (Resolved, closed)';
 
@@ -1272,10 +1272,10 @@ For more info see the Jira docs (link above).
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\Issue\JqlQuery;
-use JiraRestApi\JiraException;
-use JiraRestApi\Issue\JqlFunction;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\Issue\JqlQuery;
+use mironoff\JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\JqlFunction;
 
 try {
     $jql = new JqlQuery();
@@ -1308,8 +1308,8 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\JiraException;
 
 $issueKey = 'TEST-316';
 
@@ -1334,9 +1334,9 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\Issue\RemoteIssueLink;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\Issue\RemoteIssueLink;
+use mironoff\JiraRestApi\JiraException;
 
 $issueKey = 'TEST-316';
 
@@ -1372,9 +1372,9 @@ This methods use `get issue` and `edit issue` methods internally.
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\Issue\TimeTracking;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\Issue\TimeTracking;
+use mironoff\JiraRestApi\JiraException;
 
 $issueKey = 'TEST-961';
 
@@ -1407,9 +1407,9 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\Issue\Worklog;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\Issue\Worklog;
+use mironoff\JiraRestApi\JiraException;
 
 $issueKey = 'TEST-961';
 
@@ -1442,10 +1442,10 @@ require 'vendor/autoload.php';
 // Worklog example for API V3 assumes JIRA_REST_API_V3=true is configured in
 // your .env file.
 
-use JiraRestApi\Issue\ContentField;
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\Issue\Worklog;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\ContentField;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\Issue\Worklog;
+use mironoff\JiraRestApi\JiraException;
 
 $issueKey = 'TEST-961';
 
@@ -1490,9 +1490,9 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\Issue\Worklog;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\Issue\Worklog;
+use mironoff\JiraRestApi\JiraException;
 
 $issueKey = 'TEST-961';
 $workLogid = '12345';
@@ -1525,8 +1525,8 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\JiraException;
 
 $issueKey = 'TEST-961';
 
@@ -1556,8 +1556,8 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\JiraException;
 
 $issueKey = 'TEST-961';
 
@@ -1582,8 +1582,8 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\JiraException;
 
 $issueKey = 'TEST-961';
 
@@ -1608,9 +1608,9 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\Issue\Notify;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\Issue\Notify;
+use mironoff\JiraRestApi\JiraException;
 
 $issueKey = 'TEST-961';
 
@@ -1644,9 +1644,9 @@ The Link Issue Resource provides functionality to manage issue links.
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\IssueLink\IssueLink;
-use JiraRestApi\IssueLink\IssueLinkService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\IssueLink\IssueLink;
+use mironoff\JiraRestApi\IssueLink\IssueLinkService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $il = new IssueLink();
@@ -1675,8 +1675,8 @@ Rest resource to retrieve a list of issue link types.
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\IssueLink\IssueLinkService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\IssueLink\IssueLinkService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $ils = new IssueLinkService();
@@ -1700,8 +1700,8 @@ By default created user will not be notified with email. If password field is no
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\JiraException;
-use JiraRestApi\User\UserService;
+use mironoff\JiraRestApi\JiraException;
+use mironoff\JiraRestApi\User\UserService;
 
 try {
     $us = new UserService();
@@ -1731,8 +1731,8 @@ Returns a user.
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\JiraException;
-use JiraRestApi\User\UserService;
+use mironoff\JiraRestApi\JiraException;
+use mironoff\JiraRestApi\User\UserService;
 
 try {
     $us = new UserService();
@@ -1756,8 +1756,8 @@ Returns a list of users that match the search string and/or property.
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\JiraException;
-use JiraRestApi\User\UserService;
+use mironoff\JiraRestApi\JiraException;
+use mironoff\JiraRestApi\User\UserService;
 
 try {
     $us = new UserService();
@@ -1788,8 +1788,8 @@ Returns a list of users that match the search string.
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\JiraException;
-use JiraRestApi\User\UserService;
+use mironoff\JiraRestApi\JiraException;
+use mironoff\JiraRestApi\User\UserService;
 
 try {
     $us = new UserService();
@@ -1821,8 +1821,8 @@ Returns a list of users that match the search string.
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\JiraException;
-use JiraRestApi\User\UserService;
+use mironoff\JiraRestApi\JiraException;
+use mironoff\JiraRestApi\User\UserService;
 
 try {
     $us = new UserService();
@@ -1849,8 +1849,8 @@ Removes user.
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\JiraException;
-use JiraRestApi\User\UserService;
+use mironoff\JiraRestApi\JiraException;
+use mironoff\JiraRestApi\User\UserService;
 
 try {
     $us = new UserService();
@@ -1874,9 +1874,9 @@ Create new group.
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\JiraException;
-use JiraRestApi\Group\GroupService;
-use JiraRestApi\Group\Group;
+use mironoff\JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Group\GroupService;
+use mironoff\JiraRestApi\Group\Group;
 
 try {
     $g = new Group();
@@ -1903,8 +1903,8 @@ returns a paginated list of users who are members of the specified group and its
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\JiraException;
-use JiraRestApi\Group\GroupService;
+use mironoff\JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Group\GroupService;
 
 try {
    $queryParam = [
@@ -1938,8 +1938,8 @@ add user to given group.
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\JiraException;
-use JiraRestApi\Group\GroupService;
+use mironoff\JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Group\GroupService;
 
 try {
     $groupName  = '한글 그룹 name';
@@ -1968,8 +1968,8 @@ Removes given user from a group.
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\JiraException;
-use JiraRestApi\Group\GroupService;
+use mironoff\JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Group\GroupService;
 
 try {
     $groupName  = '한글 그룹 name';
@@ -1993,8 +1993,8 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Priority\PriorityService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Priority\PriorityService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $ps = new PriorityService();
@@ -2015,8 +2015,8 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Priority\PriorityService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Priority\PriorityService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $ps = new PriorityService();
@@ -2037,8 +2037,8 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Attachment\AttachmentService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Attachment\AttachmentService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $attachmentId = 12345;
@@ -2060,8 +2060,8 @@ Gets the attachment information and saves the attachment into the outDir directo
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Attachment\AttachmentService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Attachment\AttachmentService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $attachmentId = 12345;
@@ -2085,8 +2085,8 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Attachment\AttachmentService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Attachment\AttachmentService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $attachmentId = 12345;
@@ -2107,10 +2107,10 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Issue\Version;
-use JiraRestApi\Project\ProjectService;
-use JiraRestApi\Version\VersionService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\Version;
+use mironoff\JiraRestApi\Project\ProjectService;
+use mironoff\JiraRestApi\Version\VersionService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $projectService = new ProjectService();
@@ -2143,9 +2143,9 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Version\VersionService;
-use JiraRestApi\Project\ProjectService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Version\VersionService;
+use mironoff\JiraRestApi\Project\ProjectService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $versionService = new VersionService();
@@ -2178,9 +2178,9 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Version\VersionService;
-use JiraRestApi\Project\ProjectService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Version\VersionService;
+use mironoff\JiraRestApi\Project\ProjectService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $versionService = new VersionService();
@@ -2205,9 +2205,9 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Version\VersionService;
-use JiraRestApi\Project\ProjectService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Version\VersionService;
+use mironoff\JiraRestApi\Project\ProjectService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $versionService = new VersionService();
@@ -2232,9 +2232,9 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Version\VersionService;
-use JiraRestApi\Project\ProjectService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Version\VersionService;
+use mironoff\JiraRestApi\Project\ProjectService;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $versionService = new VersionService();
@@ -2259,10 +2259,10 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Component\ComponentService;
-use JiraRestApi\Issue\Version;
-use JiraRestApi\Project\Component;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Component\ComponentService;
+use mironoff\JiraRestApi\Issue\Version;
+use mironoff\JiraRestApi\Project\Component;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $componentService = new ComponentService();
@@ -2289,10 +2289,10 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Component\ComponentService;
-use JiraRestApi\Issue\Version;
-use JiraRestApi\Project\Component;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Component\ComponentService;
+use mironoff\JiraRestApi\Issue\Version;
+use mironoff\JiraRestApi\Project\Component;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $componentService = new ComponentService();
@@ -2319,10 +2319,10 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Component\ComponentService;
-use JiraRestApi\Issue\Version;
-use JiraRestApi\Project\Component;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Component\ComponentService;
+use mironoff\JiraRestApi\Issue\Version;
+use mironoff\JiraRestApi\Project\Component;
+use mironoff\JiraRestApi\JiraException;
 
 try {
     $componentService = new ComponentService();
@@ -2346,7 +2346,7 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Board\BoardService;
+use mironoff\JiraRestApi\Board\BoardService;
 
 try {
   $board_service = new BoardService();
@@ -2365,7 +2365,7 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Board\BoardService;
+use mironoff\JiraRestApi\Board\BoardService;
 
 try {
   $board_service = new BoardService();
@@ -2386,7 +2386,7 @@ try {
 <?php
 require 'vendor/autoload.php';
 
-use JiraRestApi\Board\BoardService;
+use mironoff\JiraRestApi\Board\BoardService;
 
 try {
   $board_service = new BoardService();
@@ -2413,7 +2413,7 @@ try {
 require 'vendor/autoload.php';
 
 try {
-  $board_service = new JiraRestApi\Board\BoardService();
+  $board_service = new mironoff\JiraRestApi\Board\BoardService();
   $board_id = 1;
   $epics = $board_service->getBoardEpics($board_id, [
     'maxResults' => 500,
@@ -2436,7 +2436,7 @@ try {
 require 'vendor/autoload.php';
 
 try {
-  $epic_service = new JiraRestApi\Epic\EpicService();
+  $epic_service = new mironoff\JiraRestApi\Epic\EpicService();
   $epic_id = 1;
   $epic = $epic_service->getEpic($epic_id);
   
@@ -2455,7 +2455,7 @@ try {
 require 'vendor/autoload.php';
 
 try {
-  $epic_service = new JiraRestApi\Epic\EpicService();
+  $epic_service = new mironoff\JiraRestApi\Epic\EpicService();
   $epic_id = 1;
   $issues = $epic_service->getEpicIssues($epic_id, [
     'maxResults' => 500,

@@ -1,6 +1,6 @@
 <?php
 
-namespace JiraRestApi\Field;
+namespace mironoff\mironoff\JiraRestApi\Field;
 
 /**
  * Custom filed schema.

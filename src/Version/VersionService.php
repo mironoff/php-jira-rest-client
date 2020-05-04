@@ -1,14 +1,14 @@
 <?php
 
-namespace JiraRestApi\Version;
+namespace mironoff\JiraRestApi\Version;
 
-use JiraRestApi\Issue\Version;
-use JiraRestApi\Issue\VersionIssueCounts;
-use JiraRestApi\Issue\VersionUnresolvedCount;
-use JiraRestApi\JiraException;
-use JiraRestApi\Project\ProjectService;
+use mironoff\JiraRestApi\Issue\Version;
+use mironoff\JiraRestApi\Issue\VersionIssueCounts;
+use mironoff\JiraRestApi\Issue\VersionUnresolvedCount;
+use mironoff\JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Project\ProjectService;
 
-class VersionService extends \JiraRestApi\JiraClient
+class VersionService extends \mironoff\JiraRestApi\JiraClient
 {
     private $uri = '/version';
 
@@ -17,7 +17,7 @@ class VersionService extends \JiraRestApi\JiraClient
      *
      * @param Version|array $version
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      * @throws \JsonMapper_Exception
      *
      * @return Version Version class

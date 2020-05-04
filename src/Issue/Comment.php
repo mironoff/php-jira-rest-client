@@ -1,6 +1,6 @@
 <?php
 
-namespace JiraRestApi\Issue;
+namespace mironoff\JiraRestApi\Issue;
 
 class Comment implements \JsonSerializable
 {
@@ -12,13 +12,13 @@ class Comment implements \JsonSerializable
     /** @var string */
     public $id;
 
-    /** @var \JiraRestApi\Issue\Reporter */
+    /** @var \mironoff\JiraRestApi\Issue\Reporter */
     public $author;
 
     /** @var string */
     public $body;
 
-    /** @var \JiraRestApi\Issue\Reporter */
+    /** @var \mironoff\JiraRestApi\Issue\Reporter */
     public $updateAuthor;
 
     /** @var \DateTimeInterface */
@@ -27,7 +27,7 @@ class Comment implements \JsonSerializable
     /** @var \DateTimeInterface */
     public $updated;
 
-    /** @var \JiraRestApi\Issue\Visibility */
+    /** @var \mironoff\JiraRestApi\Issue\Visibility */
     public $visibility;
 
     public function setBody($body)

@@ -1,11 +1,11 @@
 <?php
 
-use JiraRestApi\Dumper;
-use JiraRestApi\Issue\Comment;
-use JiraRestApi\Issue\IssueField;
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\Issue\Transition;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Dumper;
+use mironoff\JiraRestApi\Issue\Comment;
+use mironoff\JiraRestApi\Issue\IssueField;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\Issue\Transition;
+use mironoff\JiraRestApi\JiraException;
 
 class IssueTest extends PHPUnit_Framework_TestCase
 {

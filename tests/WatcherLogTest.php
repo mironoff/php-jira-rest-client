@@ -1,9 +1,9 @@
 <?php
 
-use JiraRestApi\Dumper;
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\Issue\Reporter;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Dumper;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\Issue\Reporter;
+use mironoff\JiraRestApi\JiraException;
 
 class WatcherLogTest extends PHPUnit_Framework_TestCase
 {

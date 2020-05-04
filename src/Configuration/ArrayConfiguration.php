@@ -6,7 +6,7 @@
  * Time: 22:40.
  */
 
-namespace JiraRestApi\Configuration;
+namespace mironoff\JiraRestApi\Configuration;
 
 /**
  * Class ArrayConfiguration.

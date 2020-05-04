@@ -1,10 +1,10 @@
 <?php
 
-namespace JiraRestApi\Issue;
+namespace mironoff\JiraRestApi\Issue;
 
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\JiraException;
 
-class IssueService extends \JiraRestApi\JiraClient
+class IssueService extends \mironoff\JiraRestApi\JiraClient
 {
     private $uri = '/issue';
 
@@ -166,7 +166,7 @@ class IssueService extends \JiraRestApi\JiraClient
                 $tmpArr = $this->json_mapper->mapArray(
                     $ret,
                     new \ArrayObject(),
-                    '\JiraRestApi\Issue\Attachment'
+                    '\mironoff\JiraRestApi\Issue\Attachment'
                 );
 
                 foreach ($tmpArr as $t) {
@@ -453,7 +453,7 @@ class IssueService extends \JiraRestApi\JiraClient
         $transitions = $this->json_mapper->mapArray(
             json_decode($data),
             new \ArrayObject(),
-            '\JiraRestApi\Issue\Transition'
+            '\mironoff\JiraRestApi\Issue\Transition'
         );
 
         return $transitions;
@@ -756,7 +756,7 @@ class IssueService extends \JiraRestApi\JiraClient
         $priorities = $this->json_mapper->mapArray(
             json_decode($ret, false),
             new \ArrayObject(),
-            '\JiraRestApi\Issue\Priority'
+            '\mironoff\JiraRestApi\Issue\Priority'
         );
 
         return $priorities;
@@ -832,7 +832,7 @@ class IssueService extends \JiraRestApi\JiraClient
         $watchers = $this->json_mapper->mapArray(
             json_decode($ret, false)->watchers,
             new \ArrayObject(),
-            '\JiraRestApi\Issue\Reporter'
+            '\mironoff\JiraRestApi\Issue\Reporter'
         );
 
         return $watchers;
@@ -1099,7 +1099,7 @@ class IssueService extends \JiraRestApi\JiraClient
         $res = $this->json_mapper->mapArray(
             $schemes,
             new \ArrayObject(),
-            '\JiraRestApi\Issue\SecurityScheme'
+            '\mironoff\JiraRestApi\Issue\SecurityScheme'
         );
 
         return $res;

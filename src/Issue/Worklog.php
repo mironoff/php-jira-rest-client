@@ -1,9 +1,9 @@
 <?php
 
-namespace JiraRestApi\Issue;
+namespace mironoff\JiraRestApi\Issue;
 
-use JiraRestApi\ClassSerialize;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\ClassSerialize;
+use mironoff\JiraRestApi\JiraException;
 
 /**
  * Class Worklog.
@@ -62,7 +62,7 @@ class Worklog
     public $timeSpentSeconds;
 
     /**
-     * @var \JiraRestApi\Issue\Visibility
+     * @var \mironoff\JiraRestApi\Issue\Visibility
      */
     public $visibility;
 

@@ -1,8 +1,8 @@
 <?php
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\Issue\TimeTracking;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\Issue\TimeTracking;
+use mironoff\JiraRestApi\JiraException;
 
 class TimeTrackingTest extends PHPUnit_Framework_TestCase
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace JiraRestApi\Group;
+namespace mironoff\mironoff\JiraRestApi\Group;
 
 /**
  * Class to perform all groups related queries.
  */
-class GroupService extends \JiraRestApi\JiraClient
+class GroupService extends \mironoff\JiraRestApi\JiraClient
 {
     private $uri = '/group';
 
@@ -15,7 +15,7 @@ class GroupService extends \JiraRestApi\JiraClient
      * @param array $paramArray Possible values for $paramArray 'username', 'key'.
      *                          "Either the 'username' or the 'key' query parameters need to be provided".
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      * @throws \JsonMapper_Exception
      *
      * @return Group|object
@@ -39,7 +39,7 @@ class GroupService extends \JiraRestApi\JiraClient
      *
      * @param array $paramArray groupname, includeInactiveUsers, startAt, maxResults
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      * @throws \JsonMapper_Exception
      *
      * @return GroupSearchResult|object
@@ -62,9 +62,9 @@ class GroupService extends \JiraRestApi\JiraClient
     /**
      * Creates a group by given group parameter.
      *
-     * @param $group \JiraRestApi\Group\Group
+     * @param $group \mironoff\JiraRestApi\Group\Group
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      * @throws \JsonMapper_Exception
      *
      * @return Group|object
@@ -91,7 +91,7 @@ class GroupService extends \JiraRestApi\JiraClient
      * @param string $groupName
      * @param string $userName
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      * @throws \JsonMapper_Exception
      *
      * @return Group|object Returns the current state of the group.
@@ -118,7 +118,7 @@ class GroupService extends \JiraRestApi\JiraClient
      * @param $groupName
      * @param $userName
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      *
      * @return null Returns no content
      */

@@ -1,15 +1,15 @@
 <?php
 
-namespace JiraRestApi\IssueLink;
+namespace mironoff\JiraRestApi\IssueLink;
 
-class IssueLinkService extends \JiraRestApi\JiraClient
+class IssueLinkService extends \mironoff\JiraRestApi\JiraClient
 {
     private $uri = '';
 
     /**
      * @param IssueLink $issueLink
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      */
     public function addIssueLink($issueLink)
     {
@@ -26,7 +26,7 @@ class IssueLinkService extends \JiraRestApi\JiraClient
     }
 
     /**
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\JiraRestApi\JiraException
      *
      * @return IssueLinkType[]
      */
@@ -43,7 +43,7 @@ class IssueLinkService extends \JiraRestApi\JiraClient
         $linkTypes = $this->json_mapper->mapArray(
             json_decode($data, false),
             new \ArrayObject(),
-            '\JiraRestApi\IssueLink\IssueLinkType'
+            '\mironoff\JiraRestApi\IssueLink\IssueLinkType'
         );
 
         return $linkTypes;

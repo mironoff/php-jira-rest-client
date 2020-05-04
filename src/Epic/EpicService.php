@@ -1,13 +1,13 @@
 <?php
 
-namespace JiraRestApi\Epic;
+namespace mironoff\JiraRestApi\Epic;
 
-use JiraRestApi\AgileApiTrait;
-use JiraRestApi\Configuration\ConfigurationInterface;
-use JiraRestApi\Issue\AgileIssue;
+use mironoff\JiraRestApi\AgileApiTrait;
+use mironoff\JiraRestApi\Configuration\ConfigurationInterface;
+use mironoff\JiraRestApi\Issue\AgileIssue;
 use Psr\Log\LoggerInterface;
 
-class EpicService extends \JiraRestApi\JiraClient
+class EpicService extends \mironoff\JiraRestApi\JiraClient
 {
     use AgileApiTrait;
 

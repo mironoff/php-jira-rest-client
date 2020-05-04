@@ -1,21 +1,21 @@
 <?php
 
-namespace JiraRestApi\Issue;
+namespace mironoff\JiraRestApi\Issue;
 
-use JiraRestApi\ClassSerialize;
+use mironoff\JiraRestApi\ClassSerialize;
 
 class IssueFieldV3 extends IssueField
 {
     use ClassSerialize;
 
-    /** @var \JiraRestApi\Issue\DescriptionV3|null */
+    /** @var \mironoff\JiraRestApi\Issue\DescriptionV3|null */
     public $description;
 
-    /** @var \JiraRestApi\Issue\DescriptionV3|null */
+    /** @var \mironoff\JiraRestApi\Issue\DescriptionV3|null */
     public $environment;
 
     /**
-     * @param \JiraRestApi\Issue\DescriptionV3|null $description
+     * @param \mironoff\JiraRestApi\Issue\DescriptionV3|null $description
      *
      * @return $this|IssueField
      */
@@ -27,7 +27,7 @@ class IssueFieldV3 extends IssueField
     }
 
     /**
-     * @param \JiraRestApi\Issue\DescriptionV3|null $description
+     * @param \mironoff\JiraRestApi\Issue\DescriptionV3|null $description
      *
      * @return $this
      */
@@ -60,7 +60,7 @@ class IssueFieldV3 extends IssueField
     }
 
     /**
-     * @param \JiraRestApi\Issue\DescriptionV3|null $environment
+     * @param \mironoff\JiraRestApi\Issue\DescriptionV3|null $environment
      *
      * @return $this
      */

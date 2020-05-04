@@ -1,6 +1,6 @@
 <?php
 
-namespace JiraRestApi\Issue;
+namespace mironoff\JiraRestApi\Issue;
 
 class Issue implements \JsonSerializable
 {
@@ -20,7 +20,7 @@ class Issue implements \JsonSerializable
     /** @var string */
     public $key;
 
-    /** @var \JiraRestApi\Issue\IssueField */
+    /** @var \mironoff\JiraRestApi\Issue\IssueField */
     public $fields;
 
     /** @var array|null */
@@ -41,7 +41,7 @@ class Issue implements \JsonSerializable
     /** @var array|null */
     public $editmeta;
 
-    /** @var \JiraRestApi\Issue\ChangeLog|null */
+    /** @var \mironoff\JiraRestApi\Issue\ChangeLog|null */
     public $changelog;
 
     public function jsonSerialize()

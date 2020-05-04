@@ -1,8 +1,8 @@
 <?php
 
-use JiraRestApi\Issue\IssueService;
-use JiraRestApi\Issue\RemoteIssueLink;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Issue\IssueService;
+use mironoff\JiraRestApi\Issue\RemoteIssueLink;
+use mironoff\JiraRestApi\JiraException;
 
 class RemoteIssueLinkTest extends PHPUnit_Framework_TestCase
 {

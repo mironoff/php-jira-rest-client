@@ -1,10 +1,10 @@
 <?php
 
-namespace JiraRestApi\Issue;
+namespace mironoff\JiraRestApi\Issue;
 
 class IssueV3 extends Issue
 {
-    /** @var \JiraRestApi\Issue\IssueFieldV3 */
+    /** @var \mironoff\JiraRestApi\Issue\IssueFieldV3 */
     public $fields;
 
     public function jsonSerialize()

@@ -1,9 +1,9 @@
 <?php
 
-use JiraRestApi\Board\BoardService;
-use JiraRestApi\Board\Board;
-use JiraRestApi\Board\Location;
-use JiraRestApi\Issue\Issue;
+use mironoff\JiraRestApi\Board\BoardService;
+use mironoff\JiraRestApi\Board\Board;
+use mironoff\JiraRestApi\Board\Location;
+use mironoff\JiraRestApi\Issue\Issue;
 
 /**
  * Test agile boards integration.
@@ -20,7 +20,7 @@ class BoardTest extends PHPUnit_Framework_TestCase
 
         $board_list = $board_service->getBoardList();
         $this->assertInstanceOf(ArrayObject::class, $board_list, 'We receive a board list.');
-        /** @var \JiraRestApi\Board\Board $first_board */
+        /** @var \mironoff\JiraRestApi\Board\Board $first_board */
         $first_board = reset($board_list);
         $this->assertInstanceOf(Board::class, $first_board, 'Each element of the list is a Board instance.');
 
@@ -35,7 +35,7 @@ class BoardTest extends PHPUnit_Framework_TestCase
 
         $board = $board_service->getBoard(42);
 
-        /** @var \JiraRestApi\Board\Board $board */
+        /** @var \mironoff\JiraRestApi\Board\Board $board */
         $this->assertInstanceOf(Board::class, $board, 'We receive a board instance');
         $this->assertNotEmpty($board->getId(), 'Check board id.');
         $this->assertNotEmpty($board->getName(), 'Check board name.');

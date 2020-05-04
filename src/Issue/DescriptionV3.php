@@ -1,6 +1,6 @@
 <?php
 
-namespace JiraRestApi\Issue;
+namespace mironoff\JiraRestApi\Issue;
 
 /**
  * REST API V3 Issue description field.
@@ -18,7 +18,7 @@ class DescriptionV3 implements \JsonSerializable
     /* @var integer */
     public $version = 1;
 
-    /** @var \JiraRestApi\Issue\ContentField[]|null */
+    /** @var \mironoff\JiraRestApi\Issue\ContentField[]|null */
     public $content;
 
     public function jsonSerialize()

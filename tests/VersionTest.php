@@ -1,8 +1,8 @@
 <?php
 
-use JiraRestApi\Issue\Version;
-use JiraRestApi\Project\ProjectService;
-use JiraRestApi\Version\VersionService;
+use mironoff\JiraRestApi\Issue\Version;
+use mironoff\JiraRestApi\Project\ProjectService;
+use mironoff\JiraRestApi\Version\VersionService;
 
 class VersionTest extends PHPUnit_Framework_TestCase
 {

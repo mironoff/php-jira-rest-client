@@ -1,17 +1,17 @@
 <?php
 
-namespace JiraRestApi\Field;
+namespace mironoff\mironoff\JiraRestApi\Field;
 
-use JiraRestApi\Issue\IssueService;
+use mironoff\mironoff\JiraRestApi\Issue\IssueService;
 
-class FieldService extends \JiraRestApi\JiraClient
+class FieldService extends \mironoff\mironoff\JiraRestApi\JiraClient
 {
     private $uri = '/field';
 
     /**
      * get all field list.
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\mironoff\JiraRestApi\JiraException
      *
      * @return array of Filed class
      */
@@ -22,7 +22,7 @@ class FieldService extends \JiraRestApi\JiraClient
         $fields = $this->json_mapper->mapArray(
             json_decode($ret, false),
             new \ArrayObject(),
-            '\JiraRestApi\Field\Field'
+            '\mironoff\mironoff\JiraRestApi\Field\Field'
         );
 
         // temp array
@@ -55,7 +55,7 @@ class FieldService extends \JiraRestApi\JiraClient
      *
      * @param string $id custom field option id
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\mironoff\JiraRestApi\JiraException
      *
      * @return string
      */
@@ -73,7 +73,7 @@ class FieldService extends \JiraRestApi\JiraClient
      *
      * @param Field $field object of Field class
      *
-     * @throws \JiraRestApi\JiraException
+     * @throws \mironoff\mironoff\JiraRestApi\JiraException
      * @throws \JsonMapper_Exception
      *
      * @return Field|object created field class

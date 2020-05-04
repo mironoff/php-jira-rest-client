@@ -1,11 +1,11 @@
 <?php
 
-use JiraRestApi\Issue\Comment;
-use JiraRestApi\Issue\Issue;
-use JiraRestApi\Issue\IssueField;
-use JiraRestApi\Issue\Reporter;
-use JiraRestApi\Issue\SecurityScheme;
-use JiraRestApi\Issue\Version;
+use mironoff\JiraRestApi\Issue\Comment;
+use mironoff\JiraRestApi\Issue\Issue;
+use mironoff\JiraRestApi\Issue\IssueField;
+use mironoff\JiraRestApi\Issue\Reporter;
+use mironoff\JiraRestApi\Issue\SecurityScheme;
+use mironoff\JiraRestApi\Issue\Version;
 use \Mockery as m;
 
 class MapperTest extends PHPUnit_Framework_TestCase
@@ -16,7 +16,7 @@ class MapperTest extends PHPUnit_Framework_TestCase
     public function setUp()
     {
         $this->mapper = new JsonMapper();
-        $this->mapper->undefinedPropertyHandler = [new \JiraRestApi\JsonMapperHelper(), 'setUndefinedProperty'];
+        $this->mapper->undefinedPropertyHandler = [new \mironoff\JiraRestApi\JsonMapperHelper(), 'setUndefinedProperty'];
         $this->mapper->classMap['\\'.\DateTimeInterface::class] = \DateTime::class;
     }
 
@@ -61,7 +61,7 @@ class MapperTest extends PHPUnit_Framework_TestCase
     {
         $ret = file_get_contents('test-data/issue.json');
 
-        $is = new \JiraRestApi\Issue\IssueService();
+        $is = new \mironoff\JiraRestApi\Issue\IssueService();
         $issue = $this->mapper->map(
                 json_decode($ret), new Issue()
             );
@@ -91,16 +91,16 @@ class MapperTest extends PHPUnit_Framework_TestCase
         $ret = file_get_contents('test-data/issueFieldV3.json');
 
         $issue = $this->mapper->map(
-            json_decode($ret), new \JiraRestApi\Issue\IssueV3()
+            json_decode($ret), new \mironoff\JiraRestApi\Issue\IssueV3()
         );
 
-        $this->assertInstanceOf(\JiraRestApi\Issue\IssueV3::class, $issue);
+        $this->assertInstanceOf(\mironoff\JiraRestApi\Issue\IssueV3::class, $issue);
 
         $field = $issue->fields;
 
-        $this->assertInstanceOf(\JiraRestApi\Issue\IssueFieldV3::class, $field);
+        $this->assertInstanceOf(\mironoff\JiraRestApi\Issue\IssueFieldV3::class, $field);
 
-        $this->assertInstanceOf(\JiraRestApi\Issue\DescriptionV3::class, $field->description);
+        $this->assertInstanceOf(\mironoff\JiraRestApi\Issue\DescriptionV3::class, $field->description);
 
         $this->assertEquals(1, $field->description->version);
 

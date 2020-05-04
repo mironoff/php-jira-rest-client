@@ -1,10 +1,10 @@
 <?php
 
-namespace JiraRestApi\Component;
+namespace mironoff\mironoff\JiraRestApi\Component;
 
-use JiraRestApi\ClassSerialize;
-use JiraRestApi\Project\Project;
-use JiraRestApi\User\User;
+use mironoff\mironoff\JiraRestApi\ClassSerialize;
+use mironoff\JiraRestApi\Project\Project;
+use mironoff\JiraRestApi\User\User;
 
 /**
  * Class Component.
@@ -34,7 +34,7 @@ class Component implements \JsonSerializable
     public $description;
 
     /**
-     * @var \JiraRestApi\User\User
+     * @var \mironoff\JiraRestApi\User\User
      */
     public $lead;
 

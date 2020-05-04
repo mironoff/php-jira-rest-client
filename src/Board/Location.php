@@ -1,6 +1,6 @@
 <?php
 
-namespace JiraRestApi\Board;
+namespace mironoff\mironoff\JiraRestApi\Board;
 
 class Location implements \JsonSerializable
 {

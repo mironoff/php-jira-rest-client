@@ -1,6 +1,6 @@
 <?php
 
-namespace JiraRestApi\Issue;
+namespace mironoff\JiraRestApi\Issue;
 
 /**
  * ChangeLog History.
@@ -12,7 +12,7 @@ class History implements \JsonSerializable
     /** @var int */
     public $id;
 
-    /** @var \JiraRestApi\Issue\Reporter */
+    /** @var \mironoff\JiraRestApi\Issue\Reporter */
     public $author;
 
     /** @var string */

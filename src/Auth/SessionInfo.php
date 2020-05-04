@@ -1,8 +1,8 @@
 <?php
 
-namespace JiraRestApi\Auth;
+namespace mironoff\JiraRestApi\Auth;
 
-use JiraRestApi\ClassSerialize;
+use mironoff\JiraRestApi\ClassSerialize;
 
 class SessionInfo implements \JsonSerializable
 {

@@ -1,7 +1,7 @@
 <?php
 
-use JiraRestApi\Attachment\AttachmentService;
-use JiraRestApi\JiraException;
+use mironoff\JiraRestApi\Attachment\AttachmentService;
+use mironoff\JiraRestApi\JiraException;
 
 class AttachmentTest extends PHPUnit_Framework_TestCase
 {

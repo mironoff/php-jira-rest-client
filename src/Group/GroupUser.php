@@ -1,6 +1,6 @@
 <?php
 
-namespace JiraRestApi\Group;
+namespace mironoff\JiraRestApi\Group;
 
 class GroupUser
 {

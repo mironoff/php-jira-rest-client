@@ -1,6 +1,6 @@
 <?php
 
-namespace JiraRestApi\Configuration;
+namespace mironoff\JiraRestApi\Configuration;
 
 /**
  * Class AbstractConfiguration.

@@ -1,9 +1,9 @@
 <?php
 
-use JiraRestApi\Dumper;
-use JiraRestApi\JiraException;
-use JiraRestApi\User\User;
-use JiraRestApi\User\UserService;
+use mironoff\JiraRestApi\Dumper;
+use mironoff\JiraRestApi\JiraException;
+use mironoff\JiraRestApi\User\User;
+use mironoff\JiraRestApi\User\UserService;
 
 class UserTest extends PHPUnit_Framework_TestCase
 {

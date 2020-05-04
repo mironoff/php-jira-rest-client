@@ -1,6 +1,6 @@
 <?php
 
-namespace JiraRestApi;
+namespace mironoff\JiraRestApi;
 
 class JsonMapperHelper
 {
